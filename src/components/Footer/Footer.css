@@ -1,0 +1,37 @@
+.footer {
+    width: 100%;
+    min-height: 220px;
+    background-color: #fafafc;
+    margin-top: 100px;
+    padding: 20px 0 70px;
+}
+
+.footer-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1920px;
+    padding-right: 204px;
+    padding-left: 204px;
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+.bold {
+    font-weight: 500 !important;
+}
+
+.footer-wrap div p {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.p-light {
+    padding-top: 50px;
+    font-weight: 200 !important;
+}
+
+.f-info {
+    line-height: 1.3;
+}

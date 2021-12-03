@@ -1,0 +1,13 @@
+#secondary-info {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: #AEBEC9;
+}
+
+.blog-list--item {
+    width: 360px;
+    height: 404px;
+}
