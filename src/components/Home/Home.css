@@ -1,0 +1,9 @@
+.home-blog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-blog-cont {
+    width: 95%;
+}

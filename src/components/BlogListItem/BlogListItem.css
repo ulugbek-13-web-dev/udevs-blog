@@ -11,3 +11,8 @@
     width: 360px;
     height: 404px;
 }
+
+.blog-list--item p {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
