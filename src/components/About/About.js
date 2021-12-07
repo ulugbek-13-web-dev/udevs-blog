@@ -31,7 +31,7 @@ export default function About() {
                 <div className="main-about-cont">
                     <div className="about-1">
                         <div className="about-1-container">
-                            <img src={EllipseImage} alt="Ellipse Imahge" />
+                            <img src={EllipseImage} alt="" />
                             <p className="dilorom-p">Dilorom Aliyeva</p>
                             <div className="buttons">
                                 <ButtonGroup variant="contained" className="buttons-group" aria-label="outlined primary button group">
@@ -42,7 +42,7 @@ export default function About() {
                     </div>
                     <div className="about-2">
                         <div className="about-2-container">
-                            <img src={AboutMainImage} alt="About Main Image" />
+                            <img src={AboutMainImage} alt="" />
                             <h2>{post.title}</h2>
                             <p>
                                 {post.body}
