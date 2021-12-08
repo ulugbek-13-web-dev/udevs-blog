@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 
 export default function Login() {
