@@ -8,11 +8,17 @@
 }
 
 .blog-list--item {
-    width: 360px;
-    height: 404px;
+    width: 100%;
+    margin-top: 1px;
 }
 
 .blog-list--item p {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    max-width: 85%;
+    color: gray;
+}
+
+.blog-list-image {
+    max-width: 100%;
 }

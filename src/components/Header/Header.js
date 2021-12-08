@@ -12,16 +12,12 @@ export default function Header() {
                         <img src={U} alt="U" />
                         <img src={devs} alt="devs" />
                     </div>
-                    <div className="header-right">
-                        <i class="far fa-bell"></i>
-                        <Button variant="contained">Войти</Button>
-                    </div>
                 </div>
 
             </div>
             <div className="header-next">
                 <ul>
-                    <li><Button variant="contained">Все потоки</Button></li>
+                    <li><button className="vse-potoki">Все потоки</button></li>
                     <li className="lilar">Разработка</li>
                     <li className="lilar">Aдминстрования</li>
                     <li className="lilar">Дизайн</li>

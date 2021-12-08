@@ -1,5 +1,11 @@
 .blog-list-main {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+.link-li {
+    text-decoration: none;
+    width: 20%;
+    margin: 10px 10px;
 }

@@ -19,40 +19,40 @@ function BlogList({title,body}){
     }, [])
     return(
         <div className='blog-list-main'>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="link-li">
                 <BlogListItem blogTitle = {post.title} blogBody={post.body} />
             </Link>
             

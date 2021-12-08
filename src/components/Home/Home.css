@@ -4,6 +4,9 @@
     justify-content: center;
 }
 
-.home-blog-cont {
-    width: 95%;
+.home-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
 }

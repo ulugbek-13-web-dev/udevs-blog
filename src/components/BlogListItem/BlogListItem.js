@@ -5,7 +5,7 @@ import './BlogListItem.css'
 function BlogListItem(props){
     return(
         <div className='blog-list--item'>
-            <img src={Photo} alt='fotka'/>
+            <img src={Photo} alt='fotka' className="blog-list-image"/>
             <p id='secondary-info'>18:26  11.01.2021  |   365</p>
             <p>{props.blogTitle}</p>
         </div>
