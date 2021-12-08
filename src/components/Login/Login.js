@@ -1,7 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 
 export default function Login() {
@@ -36,7 +34,6 @@ export default function Login() {
     }
     return (
         <div className="login-container">
-            <FontAwesomeIcon className="bell-icon" size={"3x"} icon={faBell} />
             {!IsAuthorized && !localData &&(
                 <button onClick={modalHandler} className="btn-login">
                     Войти
