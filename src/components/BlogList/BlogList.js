@@ -1,61 +1,36 @@
 import React, { useEffect, useState } from "react"
 import BlogListItem from '../BlogListItem/BlogListItem'
-import {Link} from 'react-router-dom'
+
 import './BlogList.css'
-import axios from "axios";
+import { db } from '../../firebase'
+import { collection, getDocs } from '@firebase/firestore'
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/3";
 
-function BlogList({title,body}){
-    const [post, setPost] = useState([])
+function BlogList() {
+    const [post, setPost] = useState([]);
+    const postCollectionRef = collection(db, 'posts')
     useEffect(() => {
-        axios
-            .get(baseURL)
-            .then(({ data }) => {
-                setPost(data)
-                console.log(`bu post ${data}`)
-            })
-            .catch((error) => console.error(error))
+        getPostsFromStore()
     }, [])
-    return(
+    function getPostsFromStore() {
+        getDocs(postCollectionRef).then((res) => {
+            setPost(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        })
+    }
+
+    return (
         <div className='blog-list-main'>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            <Link to="/about" className="link-li">
-                <BlogListItem blogTitle = {post.title} blogBody={post.body} />
-            </Link>
-            
+            {
+                post.map((item) => (
+                    <BlogListItem 
+                        blogImage = {item.image2}
+                        blogTitle={item.title} 
+                        blogBody={item.description} 
+                        className="link-li" />
+                ))
+            }
+
+
         </div>
     )
 }

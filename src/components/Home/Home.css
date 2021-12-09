@@ -4,6 +4,17 @@
     justify-content: center;
 }
 
+.home-blog-container {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-it {
+    width: 22%;
+}
+
 .home-navbar {
     display: flex;
     width: 100%;

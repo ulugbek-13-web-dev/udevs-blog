@@ -6,28 +6,46 @@ import EllipseImage from '../../assets/ellipse.png'
 import AboutMainImage from '../../assets/about-main.png'
 import Main3Image from '../../assets/main-3.png'
 import Footer from '../Footer/Footer'
-import axios from 'axios'
+import { db } from '../../firebase'
+import { collection, getDocs } from '@firebase/firestore'
 import './About.css'
+import AboutItem from './AboutItem';
 
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
 
 export default function About() {
     const [post, setPost] = useState([])
+    console.log(post)
+    const postCollectionRef = collection(db, 'posts')
+
     useEffect(() => {
-        axios
-            .get(baseURL)
-            .then(({ data }) => {
-                setPost(data)
-                console.log(`bu post ${data}`)
-            })
-            .catch((error) => console.error(error))
+        getPostsFromStore()
     }, [])
+
+    function getPostsFromStore() {
+        getDocs(postCollectionRef).then((res) => {
+            setPost(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            console.log(res)
+        })
+    }
 
     return (
         <div>
             <Header></Header>
-            <div className="main-about">
+            {
+                post.map((item) => (
+                    <AboutItem 
+                        key={item.id} 
+                        title={item.title}
+                        body={item.description} 
+                        image={item.image}
+                        dilorom={item.dilorom}
+                        title2={item.title2}
+
+                     />
+                ))
+            }
+            {/* <div className="main-about">
                 <div className="main-about-cont">
                     <div className="about-1">
                         <div className="about-1-container">
@@ -74,7 +92,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </div>
     )

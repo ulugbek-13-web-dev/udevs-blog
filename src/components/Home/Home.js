@@ -16,7 +16,45 @@ export default function Home() {
                 <Login></Login>
             </div>
             <div className="home-blog">
-                    <BlogList></BlogList>
+                <div className="home-blog-container">
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                    <div className='blog-it'>
+                        <BlogList></BlogList>
+                    </div>
+                </div>
+
             </div>
 
             <Footer></Footer>
