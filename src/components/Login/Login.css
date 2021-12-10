@@ -39,6 +39,20 @@
     cursor: pointer;
 }
 
+.btn-reg,
+.btn-logout {
+    position: relative;
+    width: 120px;
+    height: 48px;
+    padding: 16px;
+    border: none;
+    border-radius: 1rem;
+    background-color: #1B5BF7;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .modal {
     position: fixed;
     left: 50%;
@@ -91,6 +105,10 @@
     display: flex;
     flex-direction: column;
     padding: 20px 0;
+}
+
+.form-register {
+    margin-top: 30px;
 }
 
 .btn_login {

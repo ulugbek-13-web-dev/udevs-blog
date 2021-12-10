@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import EllipseImage from '../../assets/ellipse.png'
-import AboutMainImage from '../../assets/about-main.png'
-import Main3Image from '../../assets/main-3.png'
 import Footer from '../Footer/Footer'
 import { db } from '../../firebase'
 import { collection, getDocs } from '@firebase/firestore'

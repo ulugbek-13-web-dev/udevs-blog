@@ -1,5 +1,4 @@
 import React from "react"
-import Photo from '../../assets/rec1.png'
 import './BlogListItem.css'
 import { Link } from 'react-router-dom'
 
