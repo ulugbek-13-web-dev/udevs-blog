@@ -56,14 +56,14 @@ export default function Login() {
         }
     }
 
-    async function logoutHandler() {
+    async function chiqishHandler() {
         await signOut(auth);
     }
 
     function modalHandler() {
         setIsOpen(true);
     }
-    function regModalHandler() {
+    function signupHandler() {
         setRegIsOpen(true);
     }
     
@@ -84,12 +84,12 @@ export default function Login() {
                 </button>
             )}
             {User && IsLogged && (
-                <button onClick={logoutHandler} className="btn-logout">
+                <button onClick={chiqishHandler} className="btn-logout">
                     Выйти
                 </button>
             )}
             {!User && (
-                <button onClick={regModalHandler} className="btn-reg">
+                <button onClick={signupHandler} className="btn-reg">
                     Регистрация
                 </button>
             )}

@@ -1,0 +1,76 @@
+.mainPost {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.mainPostCont {
+    width: 85%;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 49px;
+}
+
+.addInput {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 5px;
+}
+
+input {
+    width: 650px;
+    height: 40px;
+    border: 1px solid #DDE2E4;
+    outline: none;
+    border-radius: 6px;
+    padding: 0 30px;
+}
+
+input::placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+.addDescript {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 650px;
+    height: 201px;
+    border: 1px solid #DDE2E4;
+    outline: none;
+    border-radius: 6px;
+    padding: 20px 30px;
+}
+
+.addBtn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.addBtn button {
+    width: 120px;
+    height: 40px;
+    background-color: #1B5BF7;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+}

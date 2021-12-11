@@ -15,6 +15,7 @@ function BlogList() {
     function getPostsFromStore() {
         getDocs(postCollectionRef).then((res) => {
             setPost(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            console.log(res)
         })
     }
 

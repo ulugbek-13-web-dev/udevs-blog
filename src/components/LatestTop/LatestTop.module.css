@@ -1,0 +1,44 @@
+    .mainLatest {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .mainContainer {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .mainLeft img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .mainRight {
+        width: 80%;
+    }
+    
+    .mainTable tr {
+        width: 800px;
+        height: 56px;
+    }
+    
+    .mainRight h2 {
+        font-family: 'Roboto', sans-serif;
+        padding: 0 0 30px 0;
+    }
+    
+    .mainTable table {
+        border-collapse: collapse;
+    }
+    
+    .mainTable tr:nth-child(odd) {
+        background: #d0d4d6;
+    }
+    
+    .mainTable td {
+        width: 300px;
+        font-family: 'Roboto', sans-serif;
+        padding: 0 20px;
+    }
