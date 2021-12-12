@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import style from './AddPost.module.css'
 import { db } from '../../firebase'
 import { addDoc, collection } from 'firebase/firestore'
+import { Link } from 'react-router-dom'
 
 export default function AddPost() {
 
@@ -61,7 +62,9 @@ export default function AddPost() {
                     </div>
 
                     <div className={style.addBtn}>
-                        <button onClick={createUser}>Submit</button>
+                        <button onClick={createUser}>
+                            <Link to="/" className='nimadir'>Submit</Link>
+                        </button>
                     </div>
                 </div>
             </div>

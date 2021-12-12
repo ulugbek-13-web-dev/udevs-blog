@@ -2,6 +2,7 @@ import React from 'react'
 import U from '../../assets/u.png'
 import devs from '../../assets/devs.png'
 import './Header.css'
+import { Link } from 'react-router-dom'
 export default function Header() {
     return (
         <div className="header-comp">
@@ -16,7 +17,7 @@ export default function Header() {
             </div>
             <div className="header-next">
                 <ul>
-                    <li><button className="vse-potoki">Все потоки</button></li>
+                    <li><button className="vse-potoki"><Link to='/' className="nimadir"> Все потоки</Link></button></li>
                     <li className="lilar">Разработка</li>
                     <li className="lilar">Aдминстрования</li>
                     <li className="lilar">Дизайн</li>

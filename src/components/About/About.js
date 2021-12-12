@@ -6,24 +6,20 @@ import { collection, getDocs } from '@firebase/firestore'
 import './About.css'
 import AboutItem from './AboutItem';
 
-
-
 export default function About() {
     const [post, setPost] = useState([])
-    console.log(post)
+    console.log(post.slice(0,2))
     const postCollectionRef = collection(db, 'posts')
 
     useEffect(() => {
-        getPostsFromStore()
-    }, [])
-
+        getPostsFromStore();
+    }, [])  
     function getPostsFromStore() {
         getDocs(postCollectionRef).then((res) => {
             setPost(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-            console.log(res)
+            console.log(`this is response => ${res[0]}`)
         })
     }
-
     return (
         <div>
             <Header></Header>
@@ -40,54 +36,6 @@ export default function About() {
                      />
                 ))
             }
-            {/* <div className="main-about">
-                <div className="main-about-cont">
-                    <div className="about-1">
-                        <div className="about-1-container">
-                            <img src={EllipseImage} alt="" />
-                            <p className="dilorom-p">Dilorom Aliyeva</p>
-                            <div className="buttons">
-                                <ButtonGroup variant="contained" className="buttons-group" aria-label="outlined primary button group">
-                                    <Button>Follow</Button>
-                                </ButtonGroup>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="about-2">
-                        <div className="about-2-container">
-                            <img src={AboutMainImage} alt="" />
-                            <h2>{post.title}</h2>
-                            <p>
-                                {post.body}
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="about-3">
-                        <div className="about-3-container">
-                            <h2>ЛУЧШИЕ БЛОГИ</h2>
-                            <div className="about-3-main">
-                                <div className="about-3-1">
-                                    <img src={Main3Image} alt="" />
-                                    <p>{post.title}</p>
-                                </div>
-                                <div className="about-3-1">
-                                    <img src={Main3Image} alt="" />
-                                    <p>{post.title}</p>
-                                </div>
-                                <div className="about-3-1">
-                                    <img src={Main3Image} alt="" />
-                                    <p>{post.title}</p>
-                                </div>
-                                <div className="about-3-1">
-                                    <img src={Main3Image} alt="" />
-                                    <p>{post.title}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             <Footer />
         </div>
     )

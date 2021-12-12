@@ -11,9 +11,7 @@
     flex-wrap: wrap;
 }
 
-.blog-it {
-    width: 22%;
-}
+.blog-it {}
 
 .home-navbar {
     display: flex;

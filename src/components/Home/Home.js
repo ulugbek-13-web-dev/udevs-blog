@@ -19,40 +19,7 @@ export default function Home() {
                 <div className="home-blog-container">
                     <div className='blog-it'>
                         <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
-                    <div className='blog-it'>
-                        <BlogList></BlogList>
-                    </div>
+                    </div>  
                 </div>
 
             </div>

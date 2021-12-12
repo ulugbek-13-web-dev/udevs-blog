@@ -8,14 +8,16 @@ import {
     signOut,
 } from "firebase/auth";
 import { auth } from "../../firebase";
+import { Link } from "react-router-dom";
 
 
 export default function Login() {
     const [IsOpen, setIsOpen] = useState(false);
     const [IsRegOpen, setRegIsOpen] = useState(false);
     const [IsLogged, setIsLogged] = useState(false);
+    const [click, setClick] = useState(false)
 
-    
+
     const [User, setUser] = useState({});
 
     const [registerEmail, setRegisterEmail] = useState('');
@@ -23,7 +25,9 @@ export default function Login() {
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPass, setLoginPass] = useState('');
 
-
+    function changeClick(){
+        setClick(!click)
+    }
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
@@ -36,6 +40,7 @@ export default function Login() {
                 registerEmail,
                 registerPass
             );
+            console.log(user)
             setRegIsOpen(false);
         } catch (error) {
             console.log(error.message);
@@ -51,6 +56,7 @@ export default function Login() {
             );
             closeHandler();
             setIsLogged(true);
+            console.log(user)
         } catch (error) {
             console.log(error.message);
         }
@@ -65,12 +71,13 @@ export default function Login() {
     }
     function signupHandler() {
         setRegIsOpen(true);
+        setClick(false)
     }
-    
+
     function closeHandler() {
         setIsOpen(false);
     }
-   
+
     function onSubmit(e) {
         e.preventDefault();
     }
@@ -83,11 +90,30 @@ export default function Login() {
                     Войти
                 </button>
             )}
-            {User && IsLogged && (
-                <button onClick={chiqishHandler} className="btn-logout">
-                    Выйти
-                </button>
+            {User && IsLogged && !click &&(
+                <div className="main-click-2">
+                    <button className="btn-logout" onClick={changeClick}>
+                        <img src="https://i.stack.imgur.com/frlIf.png" alt="" />
+                    </button>
+                    
+                </div>
+
             )}
+            {User && IsLogged && click &&(
+                <div className="main-click">
+                    <button className="btn-logout" onClick={changeClick}>
+                        <img src="https://i.stack.imgur.com/frlIf.png" alt="" />
+                    </button>
+                    <ul className="btn-ul">
+                        <li> <Link to='/add' className="nimadir">Написать публикацию</Link> </li>
+                        <li><Link to="/latest" className="nimadir">Избранные</Link></li>
+                        <li><button onClick={chiqishHandler} className="btn-btn-btn">Выйти</button> </li>
+                    </ul>
+                   
+                </div>
+
+            )}
+            
             {!User && (
                 <button onClick={signupHandler} className="btn-reg">
                     Регистрация
@@ -147,11 +173,11 @@ export default function Login() {
                         <button onClick={registerHandler} className="btn_login">
                             Регистрация
                         </button>
-                        
+
                     </div>
                 </div>
             </div >
-           
-            </div>
-             );
+
+        </div>
+    );
 }
